@@ -1,5 +1,15 @@
 require "faker"
 
+puts "Cleaning user DB..."
+User.destroy_all
+
+puts "Creating admin credentials..."
+User.create!(
+  email: "admin@admin.com",
+  password: "123456"
+)
+
+puts "Populating app with users..."
 5.times do
   User.create!(
     email: Faker::Internet.email,
@@ -7,6 +17,7 @@ require "faker"
   )
 end
 
+puts "Populating app with firms..."
 10.times do
   Firm.create!(
     name: Faker::Company.name,
