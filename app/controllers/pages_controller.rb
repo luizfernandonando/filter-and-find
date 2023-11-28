@@ -4,4 +4,5 @@ class PagesController < ApplicationController
   def home
     @company = Company.all
   end
+
 end

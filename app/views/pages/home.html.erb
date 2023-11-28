@@ -1,5 +1,61 @@
-<h1>Pages#home</h1>
-<p> Search & Find</p>
+<div class="landing-page">
+  <%= render "shared/navbar_home" %>
+    <div class="content">
+      <div class="container">
+        <div class="info">
+            <h1>FIND YOUR JOB DREAM</h1>
+            <p>Explore boundless opportunities: Discover Your Dream Job with Us</p>
+          <button>Get Started</button>
+        </div>
+          <div class="image">
+            <img src="https://i.postimg.cc/65QxYYzh/001234.png">
+          </div>
+      </div>
 
+      <div class="container">
+          <div class="image">
+            <%= image_tag "positions_ff.png", width: 400 %>
+          </div>
+        <div class="find">
+            <h1>F&F helps you find a better job.</h1>
+            <p>See what employees think about a company.</p>
+          <button>Search for company reviews</button>
+        </div>
+      </div>
+    </div>
+</div>
 
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
+<section class="hero-section">
+  <div class="card-grid">
+    <a class="card-category" href="#">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+      <div class="card__content">
+        <p class="card__category">Job Categories</p>
+        <h3 class="card__heading">Areas you are looking for</h3>
+      </div>
+    </a>
+    <a class="card-category" href="#">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+      <div class="card__content">
+        <p class="card__category">Courses</p>
+        <h3 class="card__heading">Learn more</h3>
+      </div>
+    </a>
+    <a class="card-category" href="#">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+      <div class="card__content">
+        <p class="card__category">List of Partner Companies</p>
+        <h3 class="card__heading">Our partner companies</h3>
+      </div>
+    </li>
+    <a class="card-category" href="#">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+      <div class="card__content">
+        <p class="card__category">High-demand careers</p>
+        <h3 class="card__heading">Example Card Heading</h3>
+      </div>
+    </a>
+  <div>
+</section>
