@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_28_140457) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_28_183322) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,61 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_140457) do
     t.string "sector"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "job_skills", force: :cascade do |t|
+    t.bigint "job_id", null: false
+    t.bigint "skill_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_job_skills_on_job_id"
+    t.index ["skill_id"], name: "index_job_skills_on_skill_id"
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "position"
+    t.text "description"
+    t.text "requirements"
+    t.string "contact_company"
+    t.bigint "company_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_jobs_on_company_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "job_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_matches_on_job_id"
+    t.index ["user_id"], name: "index_matches_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "company_id", null: false
+    t.text "content"
+    t.integer "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_reviews_on_company_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_skills", force: :cascade do |t|
+    t.bigint "skill_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["skill_id"], name: "index_user_skills_on_skill_id"
+    t.index ["user_id"], name: "index_user_skills_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,4 +89,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_140457) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "job_skills", "jobs"
+  add_foreign_key "job_skills", "skills"
+  add_foreign_key "jobs", "companies"
+  add_foreign_key "matches", "jobs"
+  add_foreign_key "matches", "users"
+  add_foreign_key "reviews", "companies"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "user_skills", "skills"
+  add_foreign_key "user_skills", "users"
 end

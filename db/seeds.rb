@@ -25,3 +25,14 @@ puts "Populating app with companies..."
     description: Faker::Company.brazilian_company_number
   )
 end
+
+puts "Populating app with jobs..."
+10.times do
+  Job.create!(
+    position: Faker::Job.title,
+    description: Faker::Job.position,
+    requirements: Faker::ProgrammingLanguage.name,
+    contact_company: Faker::Company.brazilian_company_number,
+    company: Company.all.sample
+  )
+end
