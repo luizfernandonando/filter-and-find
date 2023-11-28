@@ -17,9 +17,9 @@ puts "Populating app with users..."
   )
 end
 
-puts "Populating app with firms..."
+puts "Populating app with companies..."
 10.times do
-  Firm.create!(
+  Company.create!(
     name: Faker::Company.name,
     sector: Faker::Company.department,
     description: Faker::Company.brazilian_company_number
