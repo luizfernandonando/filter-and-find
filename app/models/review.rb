@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
-  validades :content, :rating, :user_id, :company_id, presence: true
+  validates :content, :rating, :user_id, :company_id, presence: true
   belongs_to :user
+  belongs_to :company
 
 end
