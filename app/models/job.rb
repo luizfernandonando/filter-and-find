@@ -5,3 +5,7 @@ class Job < ApplicationRecord
   has_many :skills, through: :job_skills
   has_many :matches
 end
+
+
+
+
