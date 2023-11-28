@@ -1,12 +1,15 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  height: 100px; /* Ajuste a altura conforme necessário */
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  max-width: 100px; /* Ajuste conforme necessário para o tamanho desejado da logo */
+  height: auto;
 }
