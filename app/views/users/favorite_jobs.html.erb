@@ -1,0 +1,11 @@
+<h1>Vagas Favoritas do Usuário</h1>
+
+<% if @favorite_jobs.any? %>
+  <ul>
+    <% @favorite_jobs.each do |job| %>
+      <li><%= job.position %> - <%= job.company.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>O usuário não possui vagas favoritas.</p>
+<% end %>
