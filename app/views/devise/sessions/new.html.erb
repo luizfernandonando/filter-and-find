@@ -12,18 +12,11 @@
                       input_html: { autocomplete: "current-password" } %>
           <%= f.input :remember_me, as: :boolean, wrapper_class: 'remember-me-checkbox' if devise_mapping.rememberable? %>
 
-
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-        <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
+        <div class="d-grid">
+          <%= f.submit "Log in", class: 'btn btn-primary' %>
         </div>
       <% end %>
-    </a>
-  </form>
+
   <%= render "devise/shared/links" %>
 </div>
 </div>
