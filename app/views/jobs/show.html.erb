@@ -1,0 +1,10 @@
+<div class="container">
+  <div>
+    <h1>Company: <%= @company.name %></h1>
+    <h1>Position: <%= @job.position %></h1>
+    <h1>Description: <%= @job.description %></h1>
+    <h1>Requirements: <%= @job.requirements %></h1>
+    <h1>Contact company: <%= @job.contact_company %></h1>
+  </div>
+  <%= link_to "Back to all jobs", jobs_path  %>
+</div>
