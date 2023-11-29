@@ -8,4 +8,5 @@ Rails.application.routes.draw do
       get 'skills', to: 'users#skills'
       get 'favorite_jobs', to: 'users#favorite_jobs'
     end
+  end
 end
