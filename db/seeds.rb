@@ -2,6 +2,8 @@ require "faker"
 
 puts "Cleaning user DB..."
 User.destroy_all
+Job.destroy_all
+Skill.destroy_all
 
 puts "Creating admin credentials..."
 User.create!(
@@ -39,9 +41,16 @@ puts "Populating app with jobs..."
   )
 end
 
-puts puts "Populating app with skills..."
+puts "Populating app with skills..."
 10.times do
-  Skill.create!(
+  Skill.create(
     name: Faker::ProgrammingLanguage.name
+  )
+end
+
+puts "Populating app with skills users..."
+10.times do
+  Skill.create(
+    name: Faker::Job.key_skill
   )
 end

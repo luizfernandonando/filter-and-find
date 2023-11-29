@@ -105,6 +105,9 @@ ul {
   padding: 10px 20px;
   color: #FFF;
   background-color: #6c63ff;
+  a {
+    color: white;
+  }
 }
 .landing-page header .links li:not(:last-child):hover {
   color: #6c63ff;
@@ -149,6 +152,9 @@ ul {
   cursor: pointer;
   color: #FFF;
   background-color: #6c63ff;
+  a {
+    color: white;
+  }
 }
 .landing-page .content .image img {
   max-width: 100%;
