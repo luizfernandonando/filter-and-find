@@ -38,3 +38,11 @@ puts "Populating app with jobs..."
     company: Company.all.sample
   )
 end
+
+puts puts "Populating app with skills..."
+10.times do
+  Skill.create!(
+    name: Faker::ProgrammingLanguage.name
+
+  )
+end
