@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: "pages#home"
-  resources :company
-
+  resources :companies, only: %i[show index]
   resources :users, only: [:show, :edit, :update] do
     member do
       get 'skills', to: 'users#skills'
