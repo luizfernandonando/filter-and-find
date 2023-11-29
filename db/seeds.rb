@@ -6,7 +6,8 @@ User.destroy_all
 puts "Creating admin credentials..."
 User.create!(
   email: "admin@admin.com",
-  password: "123456"
+  password: "123456",
+  full_name: "Admin User"
 )
 
 puts "Populating app with users..."
@@ -14,6 +15,7 @@ puts "Populating app with users..."
   User.create!(
     email: Faker::Internet.email,
     password: Faker::Internet.password,
+    full_name: Faker::Name.name
   )
 end
 
@@ -41,6 +43,5 @@ puts puts "Populating app with skills..."
 10.times do
   Skill.create!(
     name: Faker::ProgrammingLanguage.name
-
   )
 end
