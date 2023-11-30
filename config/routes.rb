@@ -7,10 +7,13 @@ Rails.application.routes.draw do
   get "contact", to: "pages#contact"
 
   get 'user_skills', to: 'users#skills'
-  get "new_skill", to: "users#new_skill"
-  post "add_skill", to: "users#add_skill"
 
-  resources :skills, only: %i[index]
+  resources :skills, only: %i[index] do
+    member do
+      post "add_to_user", to: 'skills#add_to_user'
+    end
+  end
+
   resources :companies, only: %i[show index]
   resources :jobs, only: %i[show index]
   resources :users, only: %i[show edit update] do
