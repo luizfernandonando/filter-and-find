@@ -23,6 +23,15 @@ class UsersController < ApplicationController
     @skills = @user.skills
   end
 
+  def new_skill
+    @user_skill = UserSkill.new
+  end
+
+  def add_skill
+    @user = current_user
+    @skill = current_user
+  end
+
   def favorite_jobs
     @user = current_user
     @favorite_jobs = @user.favorite_jobs
