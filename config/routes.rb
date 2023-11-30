@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get "about_us", to: "pages#about_us"
   get "contact", to: "pages#contact"
+  get "tips", to: "pages#tips"
 
   get 'user_skills', to: 'users#skills'
 
