@@ -54,3 +54,16 @@ puts "Populating app with skills users..."
     name: Faker::Job.key_skill
   )
 end
+
+
+puts "Populating job skills..."
+5.times do
+  Job.all.each do |job|
+    skill = Skill.all.sample
+
+    JobSkill.create(
+      job_id: job.id,
+      skill_id: skill.id
+    )
+  end
+end

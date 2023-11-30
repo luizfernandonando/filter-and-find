@@ -1,10 +1,9 @@
 <div class="container">
-<h1> Companies</h1>
-<div>
-  <% @companies.each do |company| %>
-  <div>
+  <h1> Companies</h1>
+    <div>
+      <% @companies.each do |company| %>
   <hr>
     <%= link_to company.name, company_path(company) %>
     <%end %>
-</div>
+    </div>
 </div>
