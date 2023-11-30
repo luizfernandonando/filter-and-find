@@ -1,7 +1,8 @@
-class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  class PagesController < ApplicationController
+    skip_before_action :authenticate_user!, only: %i[home about_us tips contact]
 
-  def home
-    @company = Company.all
+    def home
+      @company = Company.all
+    end
   end
-end
+
