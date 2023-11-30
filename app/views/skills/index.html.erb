@@ -1,0 +1,11 @@
+<div class="container skills">
+
+<h1> Skills </h1>
+  <div>
+  <% @skills.each do |skill| %>
+  <hr>
+  <%= skill.name %>
+    <%= link_to "Add skill", add_skill_path(skill.id) %>
+    <%end %>
+  </div>
+</div>
