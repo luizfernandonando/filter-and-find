@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get "about_us", to: "pages#about_us"
   get "contact", to: "pages#contact"
-
+  
   get 'user_skills', to: 'users#skills'
 
   resources :skills, only: %i[index] do
