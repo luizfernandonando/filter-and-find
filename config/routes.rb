@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "about_us", to: "pages#about_us"
   get "contact", to: "pages#contact"
   get "tips", to: "pages#tips"
+  get "careers", to: "pages#careers"
 
   get 'user_skills', to: 'users#skills'
 
