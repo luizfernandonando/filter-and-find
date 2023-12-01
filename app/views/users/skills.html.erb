@@ -8,18 +8,15 @@
     <h1>User's Skills</h1>
     <a href="skills" class="add-skills">Add Skills</a>
 
-    <% if @skills.any? %>
-    <div class="skills-list">
-      <ul>
+<% if @skills.any? %>
+    <ul>
       <% @skills.each do |skill| %>
-        <li><%= @skill.name %></li>
-        <% end %>
-      </ul>
-      <% else %>
-      <p>The user does not have registered skills.</p>
-    </div>
-    <% end %>
-
+        <li><%= skill.name %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>The user does not have registered skills.</p>
+  <% end %>
     <hr>
     <a href="jobs" class="go-to-jobs">Go to Jobs</a>
   </div>
