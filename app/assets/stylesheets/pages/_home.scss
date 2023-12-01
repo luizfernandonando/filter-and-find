@@ -103,14 +103,21 @@ ul {
 .landing-page header .links li:last-child {
   border-radius: 50px;
   padding: 5px 5px;
-  color: #ffffff;
+  color: #FFF;
   background-color: #6c63ff;
   a {
-    color: #6c63ff;
+    color: #ffffff;
   }
 }
+
+.dropdown-menu {
+  background-color: #6c63ff;
+  border-radius: 20px;
+}
+
+
 .landing-page header .links li:not(:last-child):hover {
-  color: hsl(243, 100%, 69%);
+  color: #6c63ff;
 }
 .landing-page .content .container {
   display: flex;
@@ -175,7 +182,7 @@ ul {
   margin: 0;
   line-height: 1.6;
   font-size: 15px;
-  color: #ff0000;
+  color: #5d5d5d;
 }
 .landing-page .content .find button {
   border: 0;
