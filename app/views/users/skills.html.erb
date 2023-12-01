@@ -1,14 +1,14 @@
 <div class="profile-card">
   <div class="container">
-    <h1>Profile</h1>
+    <h1><strong>Profile</strong></h1>
     <p><strong>Name:</strong> <%= @user.full_name %></p>
     <p><strong>Email:</strong> <%= @user.email %></p>
     <hr>
 
-    <h1>User's Skills</h1>
+    <h1><strong>User's Skills</strong></h1>
     <a href="skills" class="add-skills">Add Skills</a>
 
-<% if @skills.any? %>
+    <% if @skills.any? %>
     <ul>
       <% @skills.each do |skill| %>
         <li><%= skill.name %></li>
@@ -17,7 +17,8 @@
   <% else %>
     <p>The user does not have registered skills.</p>
   <% end %>
+
     <hr>
-    <a href="jobs" class="go-to-jobs">Go to Jobs</a>
+    <a href="jobs" class="go-to-jobs">Match jobs</a>
   </div>
 </div>
