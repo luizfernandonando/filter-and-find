@@ -1,9 +1,16 @@
-<div class="container">
-  <h1>OUR JOBS</h1>
-  <%  @jobs.each do |job| %>
-  <div>
-  <hr>
-    <%= link_to job.position, job_path(job) %>
+<div class="job-showcase">
+  <h1>Choose Your Perfect Job</h1>
+  <div class="jobs-list">
+    <% @jobs.each do |job| %>
+      <div class="job-item">
+        <h2><%= link_to job.position, job_path(job) %></h2>
+        <p><strong>Company:</strong> <%= job.company.name %></p>
+        <p><strong>Description:</strong> <%= job.description %></p>
+        <hr>
+      </div>
+    <% end %>
   </div>
-  <% end %>
+  <div class="back-link">
+    <%= link_to "Back to Profile", user_skills_path, class: "back-button" %>
+  </div>
 </div>
