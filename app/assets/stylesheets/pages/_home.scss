@@ -4,7 +4,31 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
   background: linear-gradient(25deg,#ffffff 50%, #ffffff 300%) !important;
+}
+
+.skills-heading {
+  text-align: center; /* Centraliza o texto */
+  font-size: 48px; /* Ajuste o tamanho da fonte conforme necessário */
+  /* Outras propriedades de estilo, se necessário */
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px; /* Ajuste conforme necessário */
+  border-bottom: 1px solid #ccc; /* Adicione uma borda inferior para separar os itens da lista */
+}
+
+.skill-name {
+  flex-grow: 1; /* Ocupa o espaço disponível, empurrando o botão para o final */
+  margin-right: 10px; /* Adiciona um espaçamento à direita para separar o texto do botão */
+}
+
+.add-skill-form {
+  margin-left: auto; /* Move o botão para a direita */
 }
 
 a {
