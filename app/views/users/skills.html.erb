@@ -1,15 +1,22 @@
 <div class="container">
+  <h1>Perfil do Usuário</h1>
+  <p><strong>Nome:</strong> <%= @user.full_name %></p>
+  <p><strong>Email:</strong> <%= @user.email %></p>
+  <hr>
 
-<h1>Habilidades do Usuário</h1>
-<hr>
+  <h1>Habilidades do Usuário</h1>
+  <%= link_to "Add Skills", skills_path %>
 
-<% if @skills.any? %>
-  <ul>
-    <% @skills.each do |skill| %>
-      <li><%= skill.name %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>O usuário não possui habilidades cadastradas.</p>
-<% end %>
+  <% if @skills.any? %>
+    <ul>
+      <% @skills.each do |skill| %>
+        <li><%= skill.name %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>O usuário não possui habilidades cadastradas.</p>
+  <% end %>
+
+  <hr>
+  <%= link_to "Go to Jobs", jobs_path %>
 </div>
