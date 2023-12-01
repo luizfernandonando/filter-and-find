@@ -8,6 +8,24 @@ body {
 
 }
 
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px; /* Ajuste conforme necessário */
+  border-bottom: 1px solid #ccc; /* Adicione uma borda inferior para separar os itens da lista */
+}
+
+.skill-name {
+  flex-grow: 1; /* Ocupa o espaço disponível, empurrando o botão para o final */
+  margin-right: 10px; /* Adiciona um espaçamento à direita para separar o texto do botão */
+}
+
+.add-skill-form {
+  margin-left: auto; /* Move o botão para a direita */
+}
+
+
 a {
   text-decoration: none;
 }

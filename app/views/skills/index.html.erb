@@ -5,11 +5,12 @@
   <div>
     <ul>
       <% @skills.each do |skill| %>
-        <li>
-          <%= skill.name %>
-          <%# <%= link_to "Add skill", add_to_user_skill_path(skill)%>
-          <%= form_tag add_to_user_skill_path(skill), method: :post do %>
-            <%= submit_tag "Add to My Skills" %>
+        <li class="skill-item">
+          <span class="skill-name"><%= skill.name %></span>
+          <%= form_tag add_to_user_skill_path(skill), method: :post, class: "add-skill-form" do %>
+            <div class="form-group">
+              <%= submit_tag "Add to My Skills", class: "btn btn-light" %>
+            </div>
           <% end %>
         </li>
       <%end %>
