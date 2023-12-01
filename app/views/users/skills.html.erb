@@ -1,22 +1,26 @@
-<div class="container">
-  <h1>Perfil do Usuário</h1>
-  <p><strong>Nome:</strong> <%= @user.full_name %></p>
-  <p><strong>Email:</strong> <%= @user.email %></p>
-  <hr>
+<div class="profile-card">
+  <div class="container">
+    <h1>Profile</h1>
+    <p><strong>Name:</strong> <%= @user.full_name %></p>
+    <p><strong>Email:</strong> <%= @user.email %></p>
+    <hr>
 
-  <h1>Habilidades do Usuário</h1>
-  <%= link_to "Add Skills", skills_path %>
+    <h1>User's Skills</h1>
+    <a href="skills" class="add-skills">Add Skills</a>
 
-  <% if @skills.any? %>
-    <ul>
+    <% if @skills.any? %>
+    <div class="skills-list">
+      <ul>
       <% @skills.each do |skill| %>
-        <li><%= skill.name %></li>
-      <% end %>
-    </ul>
-  <% else %>
-    <p>O usuário não possui habilidades cadastradas.</p>
-  <% end %>
+        <li><%= @skill.name %></li>
+        <% end %>
+      </ul>
+      <% else %>
+      <p>The user does not have registered skills.</p>
+    </div>
+    <% end %>
 
-  <hr>
-  <%= link_to "Go to Jobs", jobs_path %>
+    <hr>
+    <a href="jobs" class="go-to-jobs">Go to Jobs</a>
+  </div>
 </div>
