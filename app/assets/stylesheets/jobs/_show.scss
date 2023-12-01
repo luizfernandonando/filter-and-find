@@ -1,0 +1,50 @@
+/* Estilos para o card da empresa */
+.company-card {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-info {
+  margin-bottom: 20px;
+}
+
+.company-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.company-info p {
+  margin-bottom: 5px;
+}
+
+.requirements-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.requirements-list li {
+  margin-bottom: 5px;
+}
+
+.back-link {
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

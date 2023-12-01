@@ -1,15 +1,17 @@
-<div class="container">
-  <div>
-    <h1>Company: <%= @company.name %></h1>
-    <h1>Position: <%= @job.position %></h1>
-    <h1>Description: <%= @job.description %></h1>
-    <h1>Contact company: <%= @job.contact_company %></h1>
-    <h1>Requirements: </h1>
-    <% @job.skills.each do |skill| %>
-      <ul>
-        <h1> <%= skill.name %> </h1>
-      </ul>
-    <% end %>
+<div class="company-card">
+  <div class="company-info">
+    <h2>Company: <%= @company.name %></h2>
+    <p><strong>Position:</strong> <%= @job.position %></p>
+    <p><strong>Description:</strong> <%= @job.description %></p>
+    <p><strong>Contact Company:</strong> <%= @job.contact_company %></p>
+    <p><strong>Requirements:</strong></p>
+    <ul class="requirements-list">
+      <% @job.skills.each do |skill| %>
+        <li><%= skill.name %></li>
+      <% end %>
+    </ul>
   </div>
-  <%= link_to "Back to all jobs", jobs_path  %>
+  <div class="back-link">
+    <%= link_to "Back to All Jobs", jobs_path, class: "back-button" %>
+  </div>
 </div>
