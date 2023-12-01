@@ -11,6 +11,7 @@ body {
 	background: linear-gradient(90deg, #C7C5F4, #776BCC);
 }
 
+
 .container login {
 	display: flex;
 	align-items: center;
@@ -19,6 +20,7 @@ body {
 }
 
 .screen {
+  margin: 0 auto;
 	background: linear-gradient(90deg, #5D54A4, #7C78B8);
 	position: relative;
 	height: 600px;
@@ -176,3 +178,4 @@ body {
 .social-login__icon:hover {
 	transform: scale(1.5);
 }
+
