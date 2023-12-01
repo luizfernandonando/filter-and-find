@@ -4,8 +4,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-image: linear-gradient(15deg, #ffffff 50%, #6c63ff 300%);
-
+  background: linear-gradient(25deg,#ffffff 50%, #ffffff 300%) !important;
 }
 
 .skill-item {
@@ -252,11 +251,6 @@ ul {
 }
 
 
-
-
-
-
-
 :root{
   --background-dark: #ffffff;
   --text-light: rgba(255, 255, 255, 0.6);
@@ -288,7 +282,6 @@ body{
 
 .hero-section{
   align-items: flex-start;
-  background-image: linear-gradient(#ffffff 50%, #6c63ff 300%);
   display: flex;
   min-height: 100%;
   justify-content: center;
