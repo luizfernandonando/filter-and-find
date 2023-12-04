@@ -14,3 +14,17 @@
     <%= link_to "Back to Profile", user_skills_path, class: "back-button" %>
   </div>
 </div>
+
+<div class="job-showcase">
+  <div id="wrapper">
+    <% @jobs.each do |job| %>
+      <div class="card job-card">
+        <div class="card-content">
+          <p class="job-title"><%= job.position %></p>
+          <p class="company-name"><%= job.company.name %></p>
+          <p class="job-description"><%= job.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

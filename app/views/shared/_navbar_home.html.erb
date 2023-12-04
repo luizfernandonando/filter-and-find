@@ -8,7 +8,11 @@
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
               <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <% if current_user.photo.attached?  %>
+                <%= cl_image_tag current_user.photo.key, height: 40, width: 40, class:"avatar", crop: :fill %>
+              <% else %>
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier.png", class: "avatar", alt: "dropdown menu" %>
+              <% end %>
               </a>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Profile", user_skills_path, class: "dropdown-item-text" %>

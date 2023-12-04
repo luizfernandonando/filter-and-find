@@ -1,9 +1,7 @@
 <div class="company-card">
   <div class="company-info">
-    <h2>Company: <%= @company.name %></h2>
+    <h2><strong><%= @company.name %></strong></h2>
     <p><strong>Position:</strong> <%= @job.position %></p>
-    <p><strong>Description:</strong> <%= @job.description %></p>
-    <p><strong>Contact Company:</strong> <%= @job.contact_company %></p>
     <p><strong>Requirements:</strong></p>
     <ul class="requirements-list">
       <% @job.skills.each do |skill| %>
