@@ -27,7 +27,7 @@
 
       <div class="middle_content">
         <div class="sub_topic">
-          Other Positions
+          Other Companies
         </div>
 
         <div class="view_all">
@@ -40,45 +40,9 @@
         <div class="job1">
           <div class="job">
             <div class="job_name">
-              <%= company.name %>
+              <%= link_to company.name, company_path(company) %>
             </div>
-            <div class="job_country">Singapore</div>
-          </div>
-        </div>
-
-        <div class="job1">
-          <div class="job">
-            <div class="job_name">
-              Interaction Designer
-            </div>
-            <div class="job_country">Boulder. CO, USA</div>
-          </div>
-        </div>
-
-        <div class="job1">
-          <div class="job">
-            <div class="job_name">
-              UX Designer - Junior
-            </div>
-            <div class="job_country">Sri Lanka</div>
-          </div>
-        </div>
-
-        <div class="job1">
-          <div class="job">
-            <div class="job_name">
-              Visual Designer
-            </div>
-            <div class="job_country">Singapore</div>
-          </div>
-        </div>
-
-        <div class="job1">
-          <div class="job">
-            <div class="job_name">
-              Visual Designer
-            </div>
-            <div class="job_country">Singapore</div>
+            <%# <div class="job_country">Singapore</div> %>
           </div>
         </div>
           <% end %>
@@ -86,5 +50,7 @@
     </div>
   </div>
   <% end %>
-  <%= link_to "Back to dashboard", user_skills_path, class:"btn btn-primary" %>
+    <div class="button text-center">
+      <%= link_to "Back to dashboard", user_skills_path, class: "btn btn-primary" %>
+    </div>
 </div>

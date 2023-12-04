@@ -7,19 +7,13 @@
 	<div class="buttons">
 		<button class="primary">
     <a href="skills" class="add-skills">Add Skills</a>
-		</button>
-		<button class="primary ghost">
-    <a href="jobs" class="go-to-jobs">Match jobs</a>
-		</button>
-	</div>
-	<div class="skills">
-		<h6>Skills</h6>
+
     <% if @skills.any? %>
-    <ul>
+		<ul>
       <% @skills.each do |skill| %>
         <li><%= skill.name %></li>
       <% end %>
-    </ul>
+		</ul>
   <% else %>
     <p>The user does not have registered skills.</p>
   <% end %>

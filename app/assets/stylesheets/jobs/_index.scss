@@ -146,3 +146,12 @@ body {
 .job:hover {
   background-color: #F9FAFF;
 }
+
+.button text-center {
+  text-align: center;
+  /* Ajuste conforme necessário para o posicionamento vertical */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Para centralizar verticalmente */
+}

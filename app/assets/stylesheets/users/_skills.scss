@@ -60,17 +60,15 @@ button.primary.ghost {
   }
 }
 
-.skills {
-	background-color: #6c63ff;
-	text-align: left;
-	padding: 15px;
-	margin-top: 30px;
+.add-skills:hover,
+.go-to-jobs:hover {
+  text-decoration: underline;
 }
 
-.skills ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+.skills-list ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .skills ul li {
