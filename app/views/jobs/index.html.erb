@@ -1,30 +1,90 @@
-<div class="job-showcase">
-  <h1>Choose Your Perfect Job</h1>
-  <div class="jobs-list">
-    <% @jobs.each do |job| %>
-      <div class="job-item">
-        <h2><%= link_to job.position, job_path(job) %></h2>
-        <p><strong>Company:</strong> <%= job.company.name %></p>
-        <p><strong>Description:</strong> <%= job.description %></p>
-        <hr>
-      </div>
-    <% end %>
-  </div>
-  <div class="back-link">
-    <%= link_to "Back to Profile", user_skills_path, class: "back-button" %>
-  </div>
-</div>
+<div class="card_area">
+  <% @jobs.each do |job| %>
+  <div class="main_card">
+    <div class="content">
+      <div class="upper_content">
+        <div class="logo">
+          <i class="fa-solid fa-code"></i>
+        </div>
 
-<div class="job-showcase">
-  <div id="wrapper">
-    <% @jobs.each do |job| %>
-      <div class="card job-card">
-        <div class="card-content">
-          <p class="job-title"><%= job.position %></p>
-          <p class="company-name"><%= job.company.name %></p>
-          <p class="job-description"><%= job.description %></p>
+        <div class="name_position_info">
+          <div class="part_one">
+            <div class="name"><%= link_to job.company.name, job_path(job) %></div>
+            <div class="sub_content">
+              <div class="designation"><%= job.position %></div>
+              <div class="info"><%= job.description %></div>
+            </div>
+          </div>
+          <div class="part_two">
+            <div class="country">
+              Singapore
+            </div>
+          </div>
         </div>
       </div>
-    <% end %>
+
+      <div class="seperator"></div>
+
+      <div class="middle_content">
+        <div class="sub_topic">
+          Other Positions
+        </div>
+
+        <div class="view_all">
+          View All
+        </div>
+      </div>
+
+      <div class="other_jobs">
+      <% @companies.each do |company| %>
+        <div class="job1">
+          <div class="job">
+            <div class="job_name">
+              <%= company.name %>
+            </div>
+            <div class="job_country">Singapore</div>
+          </div>
+        </div>
+
+        <div class="job1">
+          <div class="job">
+            <div class="job_name">
+              Interaction Designer
+            </div>
+            <div class="job_country">Boulder. CO, USA</div>
+          </div>
+        </div>
+
+        <div class="job1">
+          <div class="job">
+            <div class="job_name">
+              UX Designer - Junior
+            </div>
+            <div class="job_country">Sri Lanka</div>
+          </div>
+        </div>
+
+        <div class="job1">
+          <div class="job">
+            <div class="job_name">
+              Visual Designer
+            </div>
+            <div class="job_country">Singapore</div>
+          </div>
+        </div>
+
+        <div class="job1">
+          <div class="job">
+            <div class="job_name">
+              Visual Designer
+            </div>
+            <div class="job_country">Singapore</div>
+          </div>
+        </div>
+          <% end %>
+      </div>
+    </div>
   </div>
+  <% end %>
+  <%= link_to "Back to dashboard", user_skills_path, class:"btn btn-primary" %>
 </div>
