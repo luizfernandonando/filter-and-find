@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_company, only: %i[new create]
+  
 
   def new
     @review = Review.new
