@@ -1,54 +1,83 @@
-/* Estilos para o perfil card */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-.profile-card {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-
+* {
+	box-sizing: border-box;
 }
 
-.container {
-  font-family: Arial, sans-serif;
-  color: #333;
+h3 {
+	margin: 10px 0;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 15px;
+h6 {
+	margin: 5px 0;
+	text-transform: uppercase;
 }
 
 p {
-  margin: 5px 0;
+	font-size: 14px;
+	line-height: 21px;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 15px 0;
+.card-container {
+  border-radius: 50px !important;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
 }
 
-.add-skills,
-.go-to-jobs {
-  display: block;
-  text-decoration: none;
-  color: #007bff;
-  margin-bottom: 10px;
+.card-container .round {
+	border: 1px solid #03BFCB;
+	border-radius: 50%;
+	padding: 7px;
 }
 
-.add-skills:hover,
-.go-to-jobs:hover {
-  text-decoration: underline;
+button.primary {
+  border-radius: 20px !important;
+	background-color: #6c63ff;
+	border: 1px solid #6c63ff;
+	border-radius: 3px;
+	color: #231E39;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+  a {
+    color: #ffffff;
+  }
 }
 
-.skills-list ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+button.primary.ghost {
+  border-radius: 20px;
+	background-color: transparent;
+	color: #6c63ff;
+  a {
+    color: #6c63ff !important;
+  }
 }
 
-.skills-list ul li {
-  margin-bottom: 5px;
+.skills {
+	background-color: #6c63ff;
+	text-align: left;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+.skills ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skills ul li {
+	border: 1px solid #ffffff;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
 }
