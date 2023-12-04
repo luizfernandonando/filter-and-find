@@ -17,7 +17,14 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :companies, only: %i[show index]
+  resources :companies, only: %i[show index] do
+    resources :reviews, only: %i[new create]
+  end
+  resources :reviews, only: [:destroy]
+
+
+
+
   resources :jobs, only: %i[show index]
   resources :users, only: %i[show edit update] do
     member do

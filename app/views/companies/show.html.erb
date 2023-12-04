@@ -1,9 +1,12 @@
 <div class="container">
-
-<h1>Company datails</h1>
-
-<hr>
-
-<p><strong>Name:</strong> <%= @company.name %></p>
-<p><strong>Description:</strong> <%= @company.description %></p>
+  <h1>Company details</h1>
+  <hr>
+  <p><strong>Name:</strong> <%= @company.name %></p>
+  <p><strong>Description:</strong> <%= @company.description %></p>
+  <p><strong>Reviews:</strong></p>
+  <ul class="list-group">
+    <% @company.reviews.each do |review| %>
+      <li class="list-group-item"><%= review.content %></li>
+    <% end %>
+  </ul>
 </div>
