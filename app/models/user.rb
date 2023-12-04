@@ -1,5 +1,7 @@
 # app/models/user.rb
 class User < ApplicationRecord
+  has_one_attached :photo
+  
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   validates :email, :password, presence: true

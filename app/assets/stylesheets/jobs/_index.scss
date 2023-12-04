@@ -51,3 +51,151 @@
 .back-button:hover {
   background-color: #0056b3;
 }
+
+// -------------------------------------
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  background-color: #FAFAFA;
+  display : grid;
+  place-items : center;
+}
+
+.card_area{
+  padding-top:100px;
+}
+
+.main_card{
+  background-color:white;
+  width:635px;
+  height:auto;
+  border-radius:8px;
+
+  -webkit-box-shadow: 0px 4px 40px 0px rgba(0,0,0,0.08);
+-moz-box-shadow: 0px 4px 40px 0px rgba(0,0,0,0.08);
+box-shadow: 0px 4px 40px 0px rgba(0,0,0,0.08);
+}
+
+.main_card:hover{
+  transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all .6s ease-in-out; /** Firefox **/
+    -o-transition: all .6s ease-in-out; /** Opera **/
+}
+
+.content {
+    padding: 35px 30px 0 35px;
+    font-family: 'Roboto', sans-serif; line-height:24px;
+}
+
+.upper_content {
+  display:flex;
+}
+
+.logo {
+  font-size: 54px;
+  height:54px;
+  width : 54px;
+  color: #4285F4;
+}
+
+.name_position_info{
+  width: 100%;
+  padding: 0 0 0 35px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.name{
+  color: Black;
+  font-weight:bold;
+  font-size:25px;
+}
+
+.sub_content{
+  padding:10px 0 0 0;
+    color: #5E6573;
+  font-weight:regular;
+}
+
+.designation{
+  font-size:16px;
+}
+.info{
+  font-size:14px;
+}
+
+.country{
+  color: #5E6573;
+  padding: 35px 0 0 0;
+  font-size:14px;
+}
+
+.seperator{
+  padding:40px 0 0 0;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.middle_content {
+  display:flex;
+  padding:15px 0 15px 0;
+  font-size:14px;
+    justify-content: space-between;
+}
+
+.sub_topic{
+  color:#5E6573;
+}
+
+.view_all {
+  font-weight:medium;
+  color:#4451FE;
+
+  transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all .2s ease-in-out; /** Firefox **/
+    -o-transition: all .2s ease-in-out; /** Opera **/
+  cursor: pointer;
+}
+
+.view_all:hover{
+color:#1A2AFF;
+}
+
+.other_jobs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+
+.job1{
+  padding-right:15px;
+}
+
+.job{
+  cursor: pointer;
+  flex-shrink: 0;
+  height:78px;
+  width:196px;
+  border-radius:9px;
+  border: 1px solid #E8E8E8;
+  font-size:16px;
+}
+
+.job_name{
+  padding: 15px 15px 0 15px;
+  font-weight: 500;
+}
+
+.job_country{
+    padding: 0 15px 15px 15px;
+  color:#9EA0A4;
+  font-weight:200;
+}
+
+.job:hover{
+      background-color:#F9FAFF;
+
+}
