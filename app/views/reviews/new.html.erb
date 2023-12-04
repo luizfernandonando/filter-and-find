@@ -1,5 +1,9 @@
 <h1>New review</h1>
 <%= simple_form_for [@company, @review] do |f| %>
   <%= f.input :content %>
+  <%= f.input :rating, collection: 0..5 %>
   <%= f.submit "Submit review", class: "btn btn-primary" %>
 <% end %>
+
+
+
