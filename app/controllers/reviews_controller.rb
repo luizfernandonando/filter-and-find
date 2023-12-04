@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.company = @company
+    @review.user = current_user
     if @review.save
       redirect_to company_path(@company)
     else
@@ -28,6 +29,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating, :user_id, :company_id)
+    params.require(:review).permit(:content, :rating)
   end
 end
