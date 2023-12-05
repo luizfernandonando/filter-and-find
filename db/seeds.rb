@@ -5,6 +5,7 @@ User.destroy_all
 Job.destroy_all
 Skill.destroy_all
 
+
 puts "Creating admin credentials..."
 User.create!(
   email: "admin@admin.com",
