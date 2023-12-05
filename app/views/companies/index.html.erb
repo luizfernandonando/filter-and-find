@@ -1,9 +1,15 @@
 <div class="container">
-  <h1 class="skills-heading"> Companies</h1>
-    <div>
-      <% @companies.each do |company| %>
-  <hr>
-    <%= link_to company.name, company_path(company) %>
-    <%end %>
-    </div>
+  <div class='row'>
+    <% @companies.each do |company| %>
+      <div class='col-4'>
+        <div class="card">
+          <%= image_tag 'fotogrupo.jpg', class: "card-img-top"  %>
+          <div class="card-body">
+            <h5 class="card-title"><% company.name %></h5>
+              <%= link_to company.name, company_path(company), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
