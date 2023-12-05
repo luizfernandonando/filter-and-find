@@ -1,5 +1,10 @@
-<div class="company-card">
-  <div class="company-info">
+<div class="content">
+    <div class="screens-wrapper">
+      <div class="screen -one">
+        <h1 class="screen-title">JOB INFO</h1>
+        <div class="card-wrapper">
+          <img class="card-cover" src="https://images.unsplash.com/photo-1576836165612-8bc9b07e7778?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+          <div class="card-info">
     <h2><strong><%= @company.name %></strong></h2>
     <p><strong>Position:</strong> <%= @job.position %></p>
     <p><strong>Requirements:</strong></p>
@@ -8,10 +13,12 @@
         <li><%= skill.name %></li>
       <% end %>
     </ul>
+            </div>
+          </div>
+      <div class="modal-header text-center mt-4">
+        <%= link_to "Back to All Jobs", jobs_path, class: "btn btn-danger d-block mx-auto" %>
+      </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="back-link">
-    <%= link_to "Back to All Jobs", jobs_path, class: "back-button" %>
-  </div>
-</div>
-
-
