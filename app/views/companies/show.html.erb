@@ -10,11 +10,14 @@
       <%# classe acima é provisória, criar uma específica pra esse grid %>
         <li><%= review.user.full_name %></li>
         <li><%= review.content %></li>
-        <li><%= review.rating %></li>
         <li>
-          <div data-controller="star-rating">
-            <div data-target="star-rating.rating" data-rating-value="<%= review.rating %>"></div>
-          </div>
+        <% review.rating.times do%>
+        <i class="fa-solid fa-star" style="color: #f6d813;"></i>
+        <% end %>
+        <% (5 - review.rating).times do%>
+        <i class="fa-regular fa-star" style="color: #f6d813;"></i>
+        <% end %>
+
         </li>
       </div>
 
