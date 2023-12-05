@@ -1,22 +1,22 @@
-<div class="container">
-
-  <h1 class="skills-heading">Skills</h1>
-  <hr>
-  <div>
-    <ul>
-      <% @skills.each do |skill| %>
-        <li class="skill-item">
-          <span class="skill-name"><%= skill.name %></span>
-          <%= form_tag add_to_user_skill_path(skill), method: :post, class: "add-skill-form" do %>
-            <div class="form-group">
-              <%= submit_tag "Add to My Skills", class: "btn btn-primary custom-button" %>
+<div class="row">
+<div class="modal-header text-center">
+  <h3 class="modal-title w-100">Add Your Skills</h3>
+</div>
+  <% @skills.each do |skill| %>
+    <div class="col-12 col-md-4">
+      <div class="ag-courses_item">
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              <%= skill.name %>
             </div>
-          <% end %>
-        </li>
-      <%end %>
-    </ul>
-    <hr>
-    <%= link_to "Back to Profile", user_skills_path %>
-
-  </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <%end %>
+    <div class="modal-header text-center">
+    <%= link_to "Back to Profile", user_skills_path, class:"modal-title w-100" %>
+    </div>
 </div>
