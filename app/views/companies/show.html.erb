@@ -4,9 +4,24 @@
   <p><strong>Name:</strong> <%= @company.name %></p>
   <p><strong>Description:</strong> <%= @company.description %></p>
   <p><strong>Reviews:</strong></p>
-  <ul class="list-group">
+  <ul>
     <% @company.reviews.each do |review| %>
-      <li class="list-group-item"><%= review.content %></li>
+      <div class="profile-card">
+      <%# classe acima é provisória, criar uma específica pra esse grid %>
+        <li><%= review.user.full_name %></li>
+        <li><%= review.content %></li>
+        <li>
+        <% review.rating.times do%>
+        <i class="fa-solid fa-star" style="color: #f6d813;"></i>
+        <% end %>
+        <% (5 - review.rating).times do%>
+        <i class="fa-regular fa-star" style="color: #f6d813;"></i>
+        <% end %>
+
+        </li>
+      </div>
+
     <% end %>
   </ul>
+  <%= link_to "Write a review", new_company_review_path(@company) %>
 </div>
