@@ -6,12 +6,12 @@
     <div class="col-12 col-md-4">
       <div class="ag-courses_item">
         <div class="ag-courses_item">
-          <a href="#" class="ag-courses-item_link">
+          <%= link_to add_to_user_skill_path(skill), data: { turbo_method: :post }, class: "ag-courses-item_link" do %>
             <div class="ag-courses-item_bg"></div>
             <div class="ag-courses-item_title">
               <%= skill.name %>
             </div>
-          </a>
+          <% end %>
         </div>
       </div>
     </div>
@@ -20,3 +20,4 @@
     <%= link_to "Back to Profile", user_skills_path, class:"modal-title w-100" %>
     </div>
 </div>
+
