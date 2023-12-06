@@ -1,25 +1,19 @@
-<div class="container login">
+<div class="container-login">
   <div class="screen">
     <div class="screen__content">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'login' }) do |f| %>
-        <div class="login__field">
-
           <%= f.input :email,
                       required: false,
                       autofocus: true,
                       input_html: { class: 'login__input', placeholder: 'Email', autocomplete: 'email' } %>
-        </div>
-        <div class="login__field">
 
           <%= f.input :password,
                       required: false,
                       input_html: { class: 'login__input', placeholder: 'Password', autocomplete: 'current-password' } %>
-        </div>
         <button type="submit" class="button login__submit">
           <span class="button__text">Log In Now</span>
           <i class="button__icon fas fa-chevron-right"></i>
         </button>
-        
       <% end %>
       <%= render 'devise/shared/links' %>
     </div>
