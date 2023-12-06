@@ -1,21 +1,24 @@
 <div class="content-show">
-    <div class="screens-wrapper">
-      <div class="screen -one">
-        <h1 class="screen-title">JOB INFO</h1>
-        <div class="card-wrapper">
-          <div class="card-info">
-    <h1><strong><%= @company.name %></strong></h1>
-    <h3><strong>Position:</strong> <%= @job.position %></h3>
-    <p><strong>Requirements:</strong></p>
-    <ul class="requirements-list">
-      <% @job.skills.each do |skill| %>
-        <li><%= skill.name %></li>
-      <% end %>
-    </ul>
-            </div>
-          </div>
+  <div class="screens-wrapper">
+    <div class="screen">
+      <h1 class="screen-title">JOB INFO</h1>
+      <div class="card-wrapper">
+        <div class="card-info">
+          <h1><strong><%= @company.name %></strong></h1>
+          <h3><strong>Position:</strong> <%= @job.position %></h3>
+          <p><strong>Requirements:</strong></p>
+          <ul class="requirements-list">
+            <% @job.skills.each do |skill| %>
+              <li><%= skill.name %></li>
+            <% end %>
+          </ul>
+
+          <div class="text-center">
             <%= link_to "Back to All Jobs", jobs_path, class: "btn-companies" %>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
+</div>
