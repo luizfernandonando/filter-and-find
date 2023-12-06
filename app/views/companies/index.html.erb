@@ -1,16 +1,22 @@
 <div class="container">
-  <div class='row'>
-    <% @companies.each do |company| %>
-      <div class='col-4'>
-        <div class="card">
-          <%= image_tag 'fotogrupo.jpg', class: "card-img-top"  %>
-          <div class="card-body">
-            <h5 class="card-title"><% company.name %></h5>
-              <%= link_to company.name, company_path(company), class: "btn btn-primary" %>
-          </div>
+  <div class="text-center">
+    <h1>Companies</h1>
+  </div>
+    <div class="cards-companies">
+      <% @companies.each do |company| %>
+      <div class="card-companies">
+        <div class="card-companies-info">
+          <span><%= company.sector %></span>
+        </div>
+
+        <div class="card-companies-heading">
+            <%= link_to company.name, company_path(company) %>
+        </div>
+
+        <div class="card-companies-tags">
+          <div class="card-companies-tag"><%= link_to "More Details", company_path(company), class: "btn btn-primary-outline" %></div>
         </div>
       </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 </div>
-

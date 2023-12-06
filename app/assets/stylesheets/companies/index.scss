@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
+.cards-companies {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  overflow-x: scroll;
+  min-height: 65vh;
+}
+
+.card-companies {
+  min-width: 300px;
+  max-width: 300px;
+  height: 400px;
+  margin-left: -80px;
+  border-radius: 40px;
+  padding: 30px;
+
+  box-shadow: -4px 4px 26px 2px hsla(184, 50%, 20%, .1);
+  background: linear-gradient(#ffffff 50%, #6c63ff 300%);
+
+  transition: all .3s;
+  position: relative;
+}
+
+.card-companies:first-child {
+  margin-left: 0;
+}
+
+.card-companies:hover,
+.card-companies:focus-within {
+  transform: translateY(-20px)
+}
+
+.card-companies:hover+.card,
+.card-companies:focus-within+.card {
+  transform: translateX(80px);
+}
+
+.card-companies-info {
+  margin-bottom: 14px;
+}
+
+.card-companies-info>span:first-child {
+  margin-right: 6px;
+}
+
+.card-companies-heading {
+  font-size: 1.6em;
+
+  a {color: #6c63ff;
+  }
+}
+
+.card-companies-heading a:link {
+  color: #6c63ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-companies-tags {
+  display: flex;
+
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+
+.card-companies-tag {
+  color: #6c63ff;
+  padding: 5px 12px;
+  border: 2px solid #6c63ff;
+  border-radius: 100px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-size: .9em;
+}
