@@ -3,26 +3,32 @@
   <hr>
   <p><strong>Name:</strong> <%= @company.name %></p>
   <p><strong>Description:</strong> <%= @company.description %></p>
-  <p><strong>Reviews:</strong></p>
-  <ul>
-    <% @company.reviews.each do |review| %>
-      <div class="profile-card">
-      <%# classe acima é provisória, criar uma específica pra esse grid %>
-        <li><%= review.user.full_name %></li>
-        <li><%= review.content %></li>
-        <li>
-        <% review.rating.times do%>
-        <i class="fa-solid fa-star" style="color: #f6d813;"></i>
-        <% end %>
-        <% (5 - review.rating).times do%>
-        <i class="fa-regular fa-star" style="color: #f6d813;"></i>
-        <% end %>
 
-        </li>
+  <%= link_to "Write a review", new_company_review_path(@company), class: "btn btn-outline-primary" %>
+<div class="cards-company">
+  <% @company.reviews.each do |review| %>
+    <div class="card-company">
+      <div class="card-company-info">
+        <span class="card-company-grad--video"><%= review.user.full_name %></span>
+        <span><%= distance_of_time_in_words_to_now(review.created_at) %> ago</span>
       </div>
 
-    <% end %>
-  </ul>
-  <%= link_to "Write a review", new_company_review_path(@company), class: "btn btn-outline-primary" %>
+      <div class="card-company-heading">
+        <a><%= review.content %></a>
+      </div>
+
+      <div class="card-company-tags">
+        <div class="card-company-tag">
+          <% review.rating.times do %>
+            <i class="fa-solid fa-star" style="color: #f6d813;"></i>
+          <% end %>
+          <% (5 - review.rating).times do %>
+            <i class="fa-regular fa-star" style="color: #f6d813;"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
   <%= link_to "Back to Companies", companies_path(@company), class: "btn btn-outline-primary" %>
 </div>
