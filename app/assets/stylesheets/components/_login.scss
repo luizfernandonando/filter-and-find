@@ -13,7 +13,6 @@ body {
 
 
 .container login {
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
@@ -89,7 +88,7 @@ body {
 .login {
 	width: 320px;
 	padding: 30px;
-	padding-top: 156px;
+	padding-top: 100px;
 }
 
 .login__field {
@@ -178,4 +177,3 @@ body {
 .social-login__icon:hover {
 	transform: scale(1.5);
 }
-
