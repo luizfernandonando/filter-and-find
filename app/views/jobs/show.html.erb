@@ -3,10 +3,9 @@
       <div class="screen -one">
         <h1 class="screen-title">JOB INFO</h1>
         <div class="card-wrapper">
-          <img class="card-cover" src="https://images.unsplash.com/photo-1576836165612-8bc9b07e7778?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
           <div class="card-info">
-    <h2><strong><%= @company.name %></strong></h2>
-    <p><strong>Position:</strong> <%= @job.position %></p>
+    <h1><strong><%= @company.name %></strong></h1>
+    <h3><strong>Position:</strong> <%= @job.position %></h3>
     <p><strong>Requirements:</strong></p>
     <ul class="requirements-list">
       <% @job.skills.each do |skill| %>
