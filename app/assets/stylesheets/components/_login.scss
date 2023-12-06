@@ -13,6 +13,7 @@ body {
 
 
 .container login {
+  overflow: hidden;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
@@ -28,6 +29,7 @@ body {
 }
 
 .screen__content {
+  overflow: hidden;
 	z-index: 1;
 	position: relative;
 	height: 100%;
