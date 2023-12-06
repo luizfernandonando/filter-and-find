@@ -29,9 +29,17 @@
           DESCRIÇÃO NANDO
         </div>
         <div class="contacts">
-          <a href=""><i class="fa-brands fa-github"></i>
-          <a href=""><i class="fa-brands fa-linkedin"></i>
-          <a href=""><i class="fa-solid fa-envelope"></i>
+          <%= link_to "https://www.linkedin.com/in/luizfernandosales/", target: "_blank" do %>
+              <i class="fa-brands fa-github"></i>
+            <% end %>
+
+          <%= link_to "https://www.linkedin.com/in/luizfernandosales/", target: "_blank" do %>
+              <i class="fa-brands fa-linkedin"></i>
+            <% end %>
+
+          <%= mail_to "lnandofonseca@gmail.com", target: "_blank" do %>
+              <i class="fa-solid fa-envelope"></i>
+              <% end %>
           <div class="clear"></div>
         </div>
         <footer></footer>
@@ -48,9 +56,18 @@
           DESCRIÇÃO YAN
         </div>
         <div class="contacts">
-          <a href=""><i class="fa-brands fa-github"></i>
-          <a href=""><i class="fa-brands fa-linkedin"></i>
-          <a href=""><i class="fa-solid fa-envelope"></i>
+          <%= link_to "https://github.com/yan-monteiro", target: "_blank" do %>
+              <i class="fa-brands fa-github"></i>
+            <% end %>
+
+          <%= link_to "https://www.linkedin.com/in/yanmonteiro/", target: "_blank" do %>
+              <i class="fa-brands fa-linkedin"></i>
+            <% end %>
+
+            <%= mail_to "yanlinhares9@hotmail.com", target: "_blank" do %>
+              <i class="fa-solid fa-envelope"></i>
+              <% end %>
+
         </div>
         <footer></footer>
       </div>
@@ -66,10 +83,19 @@
             DESCRIÇÃO PARAÍSO
           </div>
             <div class="contacts">
-              <a href=""><i class="fa-brands fa-github"></i>
-              <a href=""><i class="fa-brands fa-linkedin"></i>
-              <a href=""><i class="fa-solid fa-envelope"></i>
-            </div>
+            <%= link_to "https://github.com/lfelipepeixoto", target: "_blank" do %>
+              <i class="fa-brands fa-github"></i>
+            <% end %>
+
+            <%= link_to "https://www.linkedin.com/in/luis-felipe-paraiso-31962616a/", target: "_blank" do %>
+              <i class="fa-brands fa-linkedin"></i>
+            <% end %>
+
+
+            <%= mail_to "lfelipeparaiso@gmail.com", target: "_blank" do %>
+              <i class="fa-solid fa-envelope"></i>
+              <% end %>
+        </div>
           <footer></footer>
       </div>
       </div>
