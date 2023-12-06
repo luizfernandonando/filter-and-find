@@ -7,7 +7,7 @@
         <p><strong>Name:</strong> <%= @company.name %></p>
         <p><strong>Description:</strong> <%= @company.description %></p>
         <div class="d-flex justify-content-center">
-          <%= link_to "Write a review", new_company_review_path(@company), class: "btn btn-outline-primary" %>
+          <%= link_to "Write a review", new_company_review_path(@company), class: "btn-jobs" %>
         </div>
       </div>
     </div>
@@ -40,4 +40,4 @@
   <% end %>
 </div>
 
-<%= link_to "Back to Companies", companies_path(@company), class: "btn btn-outline-primary" %>
+<%= link_to "Back to Companies", companies_path(@company), class: "btn-jobs" %>
