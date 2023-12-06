@@ -249,6 +249,7 @@ ul {
   cursor: pointer;
   color: #FFF;
   background-color: #6c63ff;
+
 }
 
 .card .card-content .image img {
@@ -457,7 +458,7 @@ background: #55ACEE;
 background: #DD4B39;
 }
 .footer-widget-heading h3 {
-color: #fff;
+color: #6c63ff;
 font-size: 20px;
 font-weight: 600;
 margin-bottom: 40px;
@@ -517,7 +518,8 @@ padding: 25px 0;
 .copyright-text p {
 margin: 0;
 font-size: 14px;
-color: #878787;
+color: #6c6969;
+text-align: center !important;
 }
 .copyright-text p a{
 color: #6c63ff;
@@ -532,4 +534,24 @@ color: #6c63ff;
 .footer-menu li a {
 font-size: 14px;
 color: #878787;
+}
+.btn-companies{
+  border: 0;
+  border-radius: 50px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #6c63ff;
+}
+.btn-jobs{
+  border: 0;
+  border-radius: 50px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #6c63ff;
 }
