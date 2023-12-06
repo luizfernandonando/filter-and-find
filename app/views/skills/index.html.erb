@@ -1,6 +1,6 @@
 <div class="row">
 <div class="modal-header text-center">
-  <h3 class="modal-title w-100">Add Your Skills</h3>
+  <h1 class="modal-title w-100">Add Your Skills</h1>
 </div>
   <% @skills.each do |skill| %>
     <div class="col-12 col-md-4">
@@ -17,7 +17,8 @@
     </div>
     <%end %>
     <div class="modal-header text-center">
-    <%= link_to "Back to Profile", user_skills_path, class:"modal-title w-100" %>
+    <div class="container">
+    <%= link_to "Back to Profile", user_skills_path, class:"btn-jobs" %>
+    </div>
     </div>
 </div>
-
