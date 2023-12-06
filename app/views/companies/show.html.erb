@@ -23,5 +23,6 @@
 
     <% end %>
   </ul>
-  <%= link_to "Write a review", new_company_review_path(@company) %>
+  <%= link_to "Write a review", new_company_review_path(@company), class: "btn btn-outline-primary" %>
+  <%= link_to "Back to Companies", companies_path(@company), class: "btn btn-outline-primary" %>
 </div>
