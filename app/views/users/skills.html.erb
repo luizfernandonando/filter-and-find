@@ -1,5 +1,5 @@
 <div class="card-container">
-	<img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+	<%= cl_image_tag current_user.photo.key, height: 200, width: 200, class:"round", crop: :fill %>
 	<h3><%= @user.full_name %></h3>
   <h6><%= @user.email %></h6>
 	<h6>*SEEDS LOCAL DO USERS*</h6>
