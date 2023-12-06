@@ -3,10 +3,13 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   background: linear-gradient(25deg,#ffffff 50%, #ffffff 300%) !important;
+  p {
+    font-family: $font-family-sans-serif ;
+  }
 }
+
 
 .skills-heading {
   text-align: center; /* Centraliza o texto */
@@ -433,7 +436,6 @@ color: #6c63ff;
 display: block;
 font-size: 20px;
 font-weight: 700;
-font-family: 'Poppins', sans-serif;
 margin-bottom: 20px;
 }
 .footer-social-icon a {
