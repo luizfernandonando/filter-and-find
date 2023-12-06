@@ -1,6 +1,24 @@
-<h1>New review</h1>
-<%= simple_form_for [@company, @review] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :rating, collection: (0..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating", action: "click->form-submit#submit"}}  %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
+
+<div class="container">
+  <%= simple_form_for [@company, @review] do |f| %>
+    <div class="card-reviews">
+      <div class="card-reviews-image">
+        <h2 class="card-reviews-heading">
+          GIVE AN OPINION
+          <small>Your opinion is very important!</small>
+        </h2>
+      </div>
+      <form class="card-reviews-form">
+        <div class="input-reviews">
+          <%= f.input :content %>
+        </div>
+        <div class="input-reviews">
+          <%= f.input :rating, collection: (0..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating", action: "click->form-submit#submit"}} %>
+        </div>
+        <div class="action-reviews">
+          <%= f.submit "Submit review", class: "action-reviews-button" %>
+        </div>
+      </form>
+    </div>
+  <% end %>
+</div>

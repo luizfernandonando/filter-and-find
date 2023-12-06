@@ -1,0 +1,124 @@
+/* Estilos para o card da empresa */
+.company-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o título "Company details" */
+.company-card-show h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para os detalhes da empresa */
+.company-info-show p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Estilos para o botão "Write a review" */
+.company-info-show .btn {
+  text-align: center;
+  margin-top: 15px;
+}
+
+// ------------REVIEW------------------------------------------------------------
+.cards-company {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  overflow-x: scroll;
+  min-height: 60vh;
+}
+
+.card-company {
+  min-width: 270px;
+  max-width: 400px;
+  height: 400px;
+  margin-left: -80px;
+  border-radius: 40px;
+  padding: 30px;
+
+  box-shadow: -4px 4px 26px 2px hsla(184, 50%, 20%, .1);
+  background: linear-gradient(#ffffff 50%, #6c63ff 300%);
+
+  transition: all .3s;
+  position: relative;
+}
+
+.card-company:first-child {
+  margin-left: 0;
+}
+
+.card-company:hover,
+.card-company:focus-within {
+  transform: translateY(-20px)
+}
+
+.card-company:hover+.card,
+.card-company:focus-within+.card {
+  transform: translateX(80px);
+}
+
+.card-company-info {
+  margin-bottom: 14px;
+}
+
+.card-company-info>span:first-child {
+  margin-right: 6px;
+}
+
+.card-company-grad--video {
+  color: #6c63ff;
+  background: linear-gradient(to right, #6c63ff(91, 96%, 50%), #b4b0ff(159, 96%, 50%));
+  background-clip: text;
+}
+
+.card-grad--shot {
+  color: transparent;
+  background: linear-gradient(to right, #6c63ff(294, 96%, 50%), #b4b0ff(201, 96%, 50%));
+  background-clip: text;
+}
+
+.card-company-info>span:last-child {
+  color: hsl(0, 0%, 70%);
+}
+
+.card-company-heading {
+  color: #6c63ff;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-company-heading a:link {
+  color: #6c63ff;
+  font-weight: bold;
+  text-decoration: none;
+
+  a {
+    color: #6c63ff
+  }
+}
+
+.card-company-tags {
+  display: flex;
+
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+
+.card-company-tag {
+  color: hsl(0, 0%, 60%);
+  padding: 5px 12px;
+  border: 2px solid #6c63ff;
+  border-radius: 100px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-size: .9em;
+}
