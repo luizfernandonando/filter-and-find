@@ -13,23 +13,48 @@ body {
 
 
 .container login {
-  overflow: hidden;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
 }
 
-.screen {
-  margin: 0 auto;
-	background: linear-gradient(90deg, #5D54A4, #7C78B8);
-	position: relative;
-	height: 600px;
-	width: 360px;
-	box-shadow: 0px 0px 24px #5C5696;
+.screen_singup {
+  position: relative;
+  width: 340px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(to bottom right, #b4b0ff 40%, #6c63ff 0);
+  box-shadow: 0 2rem 6rem -.5rem darken(rgba(#b4b0ff, .2), 60%);
+  overflow: hidden;
+  border-radius: 50px;
+
+
+  &:first-child {
+    margin-right: 2rem;
+  }
+
+  &-title {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+
+  &-search-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
 }
 
 .screen__content {
-  overflow: hidden;
 	z-index: 1;
 	position: relative;
 	height: 100%;
