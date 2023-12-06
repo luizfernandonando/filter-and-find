@@ -11,7 +11,7 @@
               <% if current_user.photo.attached?  %>
                 <%= cl_image_tag current_user.photo.key, height: 40, width: 40, class:"avatar", crop: :fill %>
               <% else %>
-                <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier.png", class: "avatar", alt: "dropdown menu" %>
+                <%= image_tag "user_icon.png", class: "avatar", alt: "dropdown menu" %>
               <% end %>
               </a>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
