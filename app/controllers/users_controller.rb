@@ -37,7 +37,6 @@ class UsersController < ApplicationController
     @favorite_jobs = @user.favorite_jobs
   end
 
-
   private
 
   def user_params
