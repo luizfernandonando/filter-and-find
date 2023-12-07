@@ -1,56 +1,57 @@
 <div class="card_area">
   <% @jobs.each do |job| %>
-  <div class="main_card">
-    <div class="content-index">
-      <div class="upper_content">
-        <div class="logo">
-          <i class="fa-solid fa-code"></i>
-        </div>
+    <div class="main_card">
+      <div class="content-index">
+        <div class="upper_content">
+          <div class="logo">
+            <i class="fa-solid fa-code"></i>
+          </div>
 
-        <div class="name_position_info">
-          <div class="part_one">
-            <div class="name"><%= link_to job.company.name, job_path(job) %></div>
-            <div class="sub_content">
-              <div class="designation"><%= job.position %></div>
-              <div class="info"><%= job.description %></div>
+          <div class="name_position_info">
+            <div class="part_one">
+              <div class="name"><%= link_to job.company.name, job_path(job) %></div>
+              <div class="sub_content">
+                <div class="designation"><%= job.position %></div>
+                <div class="info"><%= job.description %></div>
+              </div>
+            </div>
+            <div class="part_two">
+              <div class="country">
+                Singapore
+              </div>
             </div>
           </div>
-          <div class="part_two">
-            <div class="country">
-              Singapore
-            </div>
+        </div>
+
+        <div class="seperator"></div>
+
+        <div class="middle_content">
+          <div class="sub_topic">
+            Other Companies
+          </div>
+
+          <div class="view_all">
+            View All
           </div>
         </div>
-      </div>
 
-      <div class="seperator"></div>
-
-      <div class="middle_content">
-        <div class="sub_topic">
-          Other Companies
-        </div>
-
-        <div class="view_all">
-          View All
-        </div>
-      </div>
-
-      <div class="other_jobs">
-      <% @companies.each do |company| %>
-        <div class="job1">
-          <div class="job">
-            <div class="job_name">
-              <%= link_to company.name, company_path(company) %>
+        <div class="other_jobs">
+          <% @companies.each do |company| %>
+            <div class="job1">
+              <div class="job">
+                <div class="job_name">
+                  <%= link_to company.name, company_path(company) %>
+                </div>
+                <%# <div class="job_country">Singapore</div> %>
+              </div>
             </div>
-            <%# <div class="job_country">Singapore</div> %>
-          </div>
-        </div>
           <% end %>
+        </div>
       </div>
     </div>
-  </div>
   <% end %>
-    <div class="button text-center">
-      <%= link_to "Back to Profile", user_skills_path, class: "btn-jobs" %>
-    </div>
+
+  <div class="button text-center">
+    <%= link_to "Back to Profile", user_skills_path, class: "btn-jobs" %>
+  </div>
 </div>

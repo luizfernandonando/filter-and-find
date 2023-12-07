@@ -1,4 +1,3 @@
-
 .content-show {
   display: flex;
   justify-content: center;
@@ -25,7 +24,6 @@
   box-shadow: 0 2rem 6rem -.5rem darken(rgba(#b4b0ff, .2), 60%);
   overflow: hidden;
   border-radius: 50px;
-
 
   &:first-child {
     margin-right: 3rem;
@@ -80,8 +78,7 @@
       margin-right: .2rem;
     }
 
-    h1
-    {
+    h1 {
       margin-top: .7rem;
       text-align: center;
       font-weight: 700;
@@ -130,18 +127,15 @@
 }
 
 // scrollbar
-.screen::-webkit-scrollbar-track
-{
+.screen::-webkit-scrollbar-track {
   background-color: #ffe574;
 }
 
-.screen::-webkit-scrollbar
-{
+.screen::-webkit-scrollbar {
   width: 6px;
   background-color: #F5F5F5;
 }
 
-.screen::-webkit-scrollbar-thumb
-{
+.screen::-webkit-scrollbar-thumb {
   background-color: rgba(#000, .1);
 }

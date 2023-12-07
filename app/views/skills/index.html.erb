@@ -1,24 +1,24 @@
 <div class="row">
-<div class="modal-header text-center">
-  <h1 class="modal-title w-100">Add Your Skills</h1>
-</div>
+  <div class="modal-header text-center">
+    <h1 class="modal-title w-100">Add Your Skills</h1>
+  </div>
   <% @skills.each do |skill| %>
-    <div class="col-12 col-md-4">
+  <div class="col-12 col-md-4">
+    <div class="ag-courses_item">
       <div class="ag-courses_item">
-        <div class="ag-courses_item">
-          <%= link_to add_to_user_skill_path(skill), data: { turbo_method: :post }, class: "ag-courses-item_link" do %>
-            <div class="ag-courses-item_bg"></div>
-            <div class="ag-courses-item_title">
-              <%= skill.name %>
-            </div>
-          <% end %>
+        <%= link_to add_to_user_skill_path(skill), data: { turbo_method: :post }, class: "ag-courses-item_link" do %>
+        <div class="ag-courses-item_bg"></div>
+        <div class="ag-courses-item_title">
+          <%= skill.name %>
         </div>
+        <% end %>
       </div>
     </div>
-    <%end %>
-    <div class="modal-header text-center">
+  </div>
+  <% end %>
+  <div class="modal-header text-center">
     <div class="container">
-    <%= link_to "Back to Profile", user_skills_path, class:"btn-jobs" %>
+      <%= link_to "Back to Profile", user_skills_path, class: "btn-jobs" %>
     </div>
-    </div>
+  </div>
 </div>
