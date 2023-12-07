@@ -13,13 +13,14 @@ $back-col: #6c63ff;
 /*** CARD STLES ***/
 
 .cards-container{
-  width: 793px;
+  width: 850px;
   max-width: 100%;
   margin: 2rem auto;
 }
-.card{
-  float: left;
-  margin: 3rem;
+
+.cards-flex {
+  display: flex;
+  gap: 20px;
 }
 
 .card-two{

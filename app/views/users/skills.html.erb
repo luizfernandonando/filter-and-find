@@ -1,5 +1,5 @@
 <div class="card-container">
-<%# <%= cl_image_tag current_user.photo.key, height: 200, width: 200, class:"round", crop: :fill %>
+  <%= cl_image_tag current_user.photo.key, height: 200, width: 200, class:"round", crop: :fill if current_user.photo.attached? %>
   <h3><%= @user.full_name %></h3>
   <h6><%= @user.email %></h6>
   <h6>*SEEDS LOCAL DO USERS*</h6>
