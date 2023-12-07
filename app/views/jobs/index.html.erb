@@ -1,10 +1,12 @@
 <div class="card_area">
+  <h1>MATCH JOBS</h1>
+
   <% @jobs.each do |job| %>
     <div class="main_card">
       <div class="content-index">
         <div class="upper_content">
           <div class="logo">
-            <i class="fa-solid fa-code"></i>
+            <%= image_tag "companies/#{job.company.name.downcase}.png", width: 75 %>
           </div>
 
           <div class="name_position_info">
@@ -55,3 +57,4 @@
     <%= link_to "Back to Profile", user_skills_path, class: "btn-jobs" %>
   </div>
 </div>
+
