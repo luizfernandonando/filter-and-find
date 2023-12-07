@@ -1,5 +1,4 @@
 <h1>Editar Perfil</h1>
-
 <%= form_for(@user, url: user_path(@user), method: :put) do |f| %>
   <div>
     <%= f.label :full_name %>
@@ -10,7 +9,6 @@
     <%= f.label :email %>
     <%= f.email_field :email %>
   </div>
-
 
   <div>
     <%= f.submit 'Atualizar Perfil' %>

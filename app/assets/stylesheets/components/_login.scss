@@ -11,12 +11,19 @@ body {
 	background: linear-gradient(90deg, #C7C5F4, #776BCC);
 }
 
-
 .container login {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+}
+
+.screen-session {
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);
+	position: relative;
+	height: 600px;
+	width: 360px;
+	box-shadow: 0px 0px 24px #5C5696;
 }
 
 .screen_singup {
@@ -29,6 +36,7 @@ body {
   box-shadow: 0 2rem 6rem -.5rem darken(rgba(#b4b0ff, .2), 60%);
   overflow: hidden;
   border-radius: 50px;
+
 
 
   &:first-child {

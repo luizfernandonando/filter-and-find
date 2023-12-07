@@ -1,82 +1,83 @@
-// -----------------------------------------------------------------------
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h3 {
-	margin: 10px 0;
+  margin: 10px 0;
 }
 
 h6 {
-	margin: 5px 0;
-	text-transform: uppercase;
+  margin: 5px 0;
+  text-transform: uppercase;
 }
 
 p {
-	font-size: 14px;
-	line-height: 21px;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .card-container {
-	background-color: #ffffff;
-	border-radius: 50px;
-	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
-	color: #6c63ff;
-	padding-top: 30px;
-	position: relative;
-	width: 350px;
-	max-width: 100%;
-	text-align: center;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  color: #6c63ff;
+  padding-top: 30px;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
 }
 
 .card-container .round {
-	border: 1px solid #6c63ff;
-	border-radius: 50%;
-	padding: 7px;
+  border: 1px solid #6c63ff;
+  border-radius: 50%;
+  padding: 7px;
 }
 
 button.primary {
-	background-color: #6c63ff;
-	border: 1px solid #6c63ff;
-	border-radius: 50px;
-	color: #231E39;
-	font-weight: 500;
-	padding: 10px 25px;
-  a {
-    color: #ffffff;
-  }
+  background-color: #6c63ff;
+  border: 1px solid #6c63ff;
+  border-radius: 50px;
+  color: #231E39;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+button.primary a {
+  color: #ffffff;
 }
 
 button.primary.ghost {
-	background-color: transparent;
-	color: #02899C;
+  background-color: transparent;
+  color: #02899C;
   border-radius: 50px;
-  a {
-    color: #6c63ff;
-  }
+}
+
+button.primary.ghost a {
+  color: #6c63ff;
 }
 
 .skills {
-	background-color: #6c63ff;
-	text-align: left;
-	padding: 15px;
-	margin-top: 30px;
+  background-color: #6c63ff;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
 }
 
 .skills ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .skills ul li {
-	border: 1px solid #ffffff;
-	border-radius: 15px;
-	display: inline-block;
-	font-size: 12px;
-	margin: 0 7px 7px 0;
-	padding: 7px;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
   color: #ffffff;
 }
