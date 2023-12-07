@@ -15,10 +15,8 @@
   margin-left: -30px;
   border-radius: 40px;
   padding: 30px;
-
   box-shadow: -4px 4px 26px 2px hsla(184, 50%, 20%, .1);
   background: linear-gradient(#ffffff 50%, #6c63ff 300%);
-
   transition: all .3s;
   position: relative;
 }
@@ -32,8 +30,8 @@
   transform: translateY(-20px)
 }
 
-.card-companies:hover+.card,
-.card-companies:focus-within+.card {
+.card-companies:hover + .card,
+.card-companies:focus-within + .card {
   transform: translateX(80px);
 }
 
@@ -41,14 +39,15 @@
   margin-bottom: 14px;
 }
 
-.card-companies-info>span:first-child {
+.card-companies-info > span:first-child {
   margin-right: 6px;
 }
 
 .card-companies-heading {
   font-size: 1.6em;
 
-  a {color: #6c63ff;
+  a {
+    color: #6c63ff;
   }
 }
 
@@ -60,7 +59,6 @@
 
 .card-companies-tags {
   display: flex;
-
   position: absolute;
   bottom: 50px;
   left: 30px;

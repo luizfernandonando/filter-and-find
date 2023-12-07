@@ -56,7 +56,6 @@ puts "Populating app with skills users..."
   )
 end
 
-
 puts "Populating job skills..."
 5.times do
   Job.all.each do |job|
