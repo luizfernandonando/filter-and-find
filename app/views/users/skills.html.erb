@@ -4,7 +4,6 @@
   <%= cl_image_tag current_user.photo.key, height: 200, width: 200, class:"round", crop: :fill if current_user.photo.attached? %>
   <h3><%= @user.full_name %></h3>
   <h6><%= @user.email %></h6>
-  <h6>Hello world!</h6>
   <p>I have an unending passion for coding!<br/></p>
 </div>
 
