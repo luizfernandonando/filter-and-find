@@ -28,6 +28,7 @@ p {
   width: 350px;
   max-width: 100%;
   text-align: center;
+  display: inline-block;
 }
 
 .card-container .round {
@@ -43,6 +44,7 @@ button.primary {
   color: #231E39;
   font-weight: 500;
   padding: 10px 25px;
+  margin: 10px;
 }
 
 button.primary a {
@@ -53,6 +55,7 @@ button.primary.ghost {
   background-color: transparent;
   color: #02899C;
   border-radius: 50px;
+  margin: 80px;
 }
 
 button.primary.ghost a {
@@ -62,7 +65,7 @@ button.primary.ghost a {
 .skills {
   background-color: #6c63ff;
   text-align: left;
-  padding: 15px;
+  padding: 40px;
   margin-top: 30px;
 }
 

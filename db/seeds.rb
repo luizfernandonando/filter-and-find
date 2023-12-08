@@ -22,19 +22,26 @@ puts "Populating app with users..."
   )
 end
 
-puts "Populating app with skills..."
-10.times do
-  Skill.create(
-    name: Faker::ProgrammingLanguage.name
-  )
-end
-
-puts "Populating app with skills users..."
-10.times do
-  Skill.create(
-    name: Faker::Job.key_skill
-  )
-end
+Skill.create(name: 'HTML / CSS')
+Skill.create(name: 'JavaScript')
+Skill.create(name: 'Responsive Design')
+Skill.create(name: 'Git and Version Control')
+Skill.create(name: 'Teamwork')
+Skill.create(name: 'React')
+Skill.create(name: 'MySQL')
+Skill.create(name: 'Node.js')
+Skill.create(name: 'Ajax')
+Skill.create(name: 'DOM Manipulation')
+Skill.create(name: 'Testing debugging')
+Skill.create(name: 'Figma')
+Skill.create(name: 'Ruby on Rails')
+Skill.create(name: 'Python')
+Skill.create(name: 'Backup')
+Skill.create(name: 'Database')
+Skill.create(name: 'APIs')
+Skill.create(name: 'Business Logic')
+Skill.create(name: 'C++')
+Skill.create(name: 'PHP')
 
 Company.create!(
     name: 'Google',

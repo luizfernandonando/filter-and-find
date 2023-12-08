@@ -1,17 +1,16 @@
+<div class="container">
+<div class="col-12 cards-flex">
 <div class="card-container">
   <%= cl_image_tag current_user.photo.key, height: 200, width: 200, class:"round", crop: :fill if current_user.photo.attached? %>
   <h3><%= @user.full_name %></h3>
   <h6><%= @user.email %></h6>
-  <h6>*SEEDS LOCAL DO USERS*</h6>
-  <p>*SEEDS DESCRIÇÃO DO USER<br/>*DESCRIÇÃO*</p>
+  <h6>Hello world!</h6>
+  <p>I have an unending passion for coding!<br/></p>
+</div>
+
+<div class="card-container">
   <div class="buttons">
-    <button class="primary">
-      <a href="skills" class="add-skills">Add Skills</a>
-    </button>
-    <button class="primary ghost">
-      <a href="jobs" class="go-to-jobs">Match jobs</a>
-    </button>
-  </div>
+  <h1>YOUR SKILLS</h1>
   <div class="skills">
     <h6>Skills</h6>
     <% if @skills.any? %>
@@ -24,4 +23,18 @@
       <p>The user does not have registered skills.</p>
     <% end %>
   </div>
+    <button class="primary">
+      <a href="skills" class="add-skills">Add Skills</a>
+    </button>
+  </div>
+</div>
+
+<div class="card-container">
+  <h1>MATCH YOUR JOB</h1>
+    <button class="primary ghost">
+      <a href="jobs" class="go-to-jobs">Match jobs</a>
+    </button>
+  </div>
+</div>
+</div>
 </div>
